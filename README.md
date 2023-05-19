@@ -279,3 +279,66 @@
         console.log(info);
     </script>
 ```
+
+![](https://oss.yiki.tech/img/202305192344732.png)
+
+### 函数优化
+
+#### 函数参数默认值
+
+```html
+    <script>
+        // 在 ES6 以前, 我们无法给一个函数参数设置默认值, 只能采用变通写法
+        function add(a, b) {
+            // 判断 b 是否为空，为空就给默认值 1
+            b = b || 1;
+            
+            return a + b;
+        }
+
+        // 传递一个参数
+        console.log(add(10));
+    </script>
+```
+
+![](https://oss.yiki.tech/img/202305192348281.png)
+
+```html
+    <script>
+        // ES 6 及以后可以直接给参数写上默认值，没传递就回自动使用默认值
+        function add2(a, b = 1) {
+            return a + b;
+        }
+
+        console.log(add2(20));
+    </script>
+```
+
+![](https://oss.yiki.tech/img/202305192351088.png)
+
+#### 不定参数
+
+```html
+    <script>
+        // 在 ES6 以前, 我们无法给一个函数参数设置默认值, 只能采用变通写法
+        function fun(...values) {
+            console.log(values.length);
+        }
+
+        fun(1, 2); // 2
+        fun(1, 2, 3) // 3
+    </script>
+```
+
+![](https://oss.yiki.tech/img/202305200024890.png)
+
+#### 箭头函数
+
+```html
+    <script>
+        var print = obj => console.log(obj);
+        print("hello");
+    </script>
+```
+
+![](https://oss.yiki.tech/img/202305200025130.png)
