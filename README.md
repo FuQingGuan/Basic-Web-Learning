@@ -102,3 +102,102 @@
 ```
 
 ![](https://oss.yiki.tech/img/202305182306738.png)
+
+### 解构表达式
+
+#### 数组解构
+
+```html
+    <script>
+        let arr = [1, 2, 3];
+
+        let a = arr[0];
+        let b = arr[1];
+        let c = arr[2];
+
+        console.log(a, b, c);
+    </script>
+```
+
+![](https://oss.yiki.tech/img/202305192208910.png)
+
+```html
+    <script>
+        let arr = [1, 2, 3];
+
+        // let a = arr[0];
+        // let b = arr[1];
+        // let c = arr[2];
+        
+        let [a, b, c] = arr;
+
+        console.log(a, b, c);
+    </script>
+```
+
+![](https://oss.yiki.tech/img/202305192210379.png)
+
+#### 对象解构
+
+```html
+    <script>
+        const person = {
+            name: "jack",
+            age: 21,
+            language: ['java', 'js', 'css']
+        }
+
+        const name = person.name;
+        const age = person.age;
+        const language = person.language;
+
+        console.log(name, age, language);
+
+    </script>
+```
+
+![](https://oss.yiki.tech/img/202305192214261.png)
+
+```html
+    <script>
+        const person = {
+            name: "jack",
+            age: 21,
+            language: ['java', 'js', 'css']
+        }
+
+        // const name = person.name;
+        // const age = person.age;
+        // const language = person.language;
+
+        // 对象解构
+        const {name, age, language} = person;
+
+        console.log(name, age, language);
+
+    </script>
+```
+
+![](https://oss.yiki.tech/img/202305192216509.png)
+
+```html
+    <script>
+        const person = {
+            name: "jack",
+            age: 21,
+            language: ['java', 'js', 'css']
+        }
+
+        // const name = person.name;
+        // const age = person.age;
+        // const language = person.language;
+
+        // 对象解构
+        const {name:abc, age, language} = person;
+
+        console.log(abc, age, language);
+
+    </script>
+```
+
+![](https://oss.yiki.tech/img/202305192216909.png)
