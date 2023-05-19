@@ -201,3 +201,81 @@
 ```
 
 ![](https://oss.yiki.tech/img/202305192216909.png)
+
+### 字符串扩展
+
+#### 新 API
+
+```html
+    <script>
+        let str = "hello.vue";
+        // 是否以 hello 开始
+        console.log(str.startsWith("hello")); // true
+        // 是否以 .vue 结束
+        console.log(str.endsWith(".vue")); // true
+        // 是否包含
+        console.log(str.includes("e")); // true
+        console.log(str.includes("hello")); // true
+    </script>
+```
+
+![](https://oss.yiki.tech/img/202305192222231.png)
+
+#### 字符串模版
+
+```html
+    <script>
+        // 字符串模版
+        let str = 
+        `
+            <div>
+                <span>hello world</span>
+            </div>
+        `
+
+        console.log(str);
+    </script>
+```
+
+![](https://oss.yiki.tech/img/202305192333893.png)
+
+```html
+    <script>
+        // 字符串插入变量和表达式。变量名写在 ${} 中，${} 中可以放入 JavaScript 表达式
+        let name = "张三";
+        let age = 24;
+        let info = `我是 ${name}, 今年 ${age} 了`
+
+        console.log(info);
+    </script>
+```
+
+![](https://oss.yiki.tech/img/202305192337492.png)
+
+```html
+    <script>
+        // 字符串插入变量和表达式。变量名写在 ${} 中，${} 中可以放入 JavaScript 表达式
+        let name = "张三";
+        let age = 24;
+        let info = `我是 ${name}, 今年 ${age + 10} 了`
+
+        console.log(info);
+    </script>
+```
+
+![](https://oss.yiki.tech/img/202305192338687.png)
+
+```html
+    <script>
+        // 字符串插入变量和表达式。变量名写在 ${} 中，${} 中可以放入 JavaScript 表达式
+        function fun() {
+            return "这是一个函数";
+        }
+
+        let name = "张三";
+        let age = 24;
+        let info = `我是 ${name}, 今年 ${age + 10} 了。我想说：${fun()}`
+
+        console.log(info);
+    </script>
+```
